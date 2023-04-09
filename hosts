@@ -1,0 +1,32 @@
+[routers]
+192.168.39.20
+
+[routers:vars]
+ansible_connection=network_cli
+ansible_network_os=ios
+ansible_user=spacelabs
+ansible_ssh_pass=Spacelabs-fse3051
+
+[switches]
+192.168.39.20
+
+# Below are devices for CML Lab 4/9/2023
+[cml_routers]
+10.10.20.175  # dist-rtr01 IOS-XE
+10.10.20.176  # dist-rtr01 IOS-XE
+
+[cml_routers:vars]
+ansible_connection=network_cli
+ansible_network_os=ios
+ansible_user=cisco
+ansible_ssh_pass=cisco
+
+[cml_switches]
+10.10.20.177  # dist-sw01
+10.10.20.178  # dist-sw02
+
+[cml_switches:vars]
+ansible_connection=network_cli
+ansible_network_os=nxos
+ansible_user=cisco
+ansible_ssh_pass=cisco
