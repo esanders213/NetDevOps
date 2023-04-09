@@ -1,5 +1,5 @@
 ---
-- hosts: routers
+- hosts: cml_routers
   become: yes
 
   tasks:
