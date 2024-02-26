@@ -3,7 +3,7 @@
 
 from netmiko import ConnectHandler
 
-from device_info import IOS_E as device
+from device_info import IOS_E as devices
 
 # device = {
 #     'device_type': 'cisco_ios',
@@ -16,8 +16,8 @@ from device_info import IOS_E as device
 
 
 
-for device in devices
+for device in devices:
 
-connection = ConnectHandler(**device)
-output = connection.send_command('show running-config | b ip ssh')
-print(output)
+    connection = ConnectHandler(**device)
+    output = connection.send_command('show running-config | b ip ssh')
+    print(output)
